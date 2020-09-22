@@ -26,8 +26,10 @@ https://ocean-backend-fabi-22092020.herokuapp.com/
 
 - Body-parser
 
-# Testes
+# Teste - Postman Local 
 
-Postman 
+![imagem que ilustra o teste GET no postman aplicação local.](https://github.com/Fabicaneyu/Ocean_Backend_21_09_2020/blob/master/Postman/get_local.PNG)
 
-![imagem que ilustra o teste GET no postman.](https://github.com/Fabicaneyu/Ocean_Backend_21_09_2020/blob/master/Postman/get.PNG)
+# Teste - Postman Heroku 
+
+![imagem que ilustra o teste GET no postman feito a partir do deploy no heroku.](https://github.com/Fabicaneyu/Ocean_Backend_21_09_2020/blob/master/Postman/get_heroku.PNG)
