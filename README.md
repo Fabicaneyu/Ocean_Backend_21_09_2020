@@ -26,3 +26,4 @@ Realizada aplicação no VSCODE
 
 Postman 
 
+![imagem que ilustra o teste GET no postman.](./Postman/get.png)
