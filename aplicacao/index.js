@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+//Garante que todas as requisiçõesj á sejam json 
 const jsonParser = bodyParser.json();
 app.use(jsonParser);
 
@@ -13,7 +14,7 @@ app.use(jsonParser);
 
 //endpoint - consultar no postmam GET: localhost:3000/
 app.get('/', (req, res) => {
-    res.send('GET Hello World!');
+    res.send('Hello World!');
 })
 
 //[[ Endpoints ]] de envios de mensagens
@@ -37,6 +38,7 @@ app.get('/mensagens', (req, res) => {
 //endpoint - consultar no postmam POST: localhost:3000/mensagens
 app.post('/mensagens', (req, res) => {
 
+
     const mensagem = req.body.mensagem;
     mensagens.push(mensagem);
 
@@ -48,19 +50,30 @@ app.post('/mensagens', (req, res) => {
 //Read single
 ////endpoint - consultar no postmam GET: localhost:3000/mensagens/1 ou 2 
 app.get('/mensagens/:id', (req, res) => {
-    res.send('Exibe uma mensagem selecionada pelo ID que foi informado');
+
+    const id = req.params.id;
+    const mensagem = mensagens[id]
+    res.json(mensagem);
 })
 
 //Update
 //endpoint - consultar no postmam PUT: localhost:3000/mensagens/1 ou 2
 app.put('/mensagens/:id', (req, res) => {
-    res.send('Atualiza uma mensagem selecionada pelo ID que foi informado');
+
+    const id = req.params.id;
+    const mensagem = req.body.mensagem;
+    mensagens[id] = req.body.mensagem;
+    res.send(`Mensagem com o ID ${id} foi atualizada com sucesso`);
 })
 
 //Delete
 //endpoint - consultar no postmam DELETE: localhost:3000/mensagens/1 ou 2
 app.delete('/mensagens/:id', (req, res) => {
-    res.send('Remove uma mensagem selecionada pelo ID que foi informado');
+    const id = req.params.id;
+
+    delete mensagens[id];
+    
+    res.send(`Mensagem com o ID ${id} foi removida com sucesso`);
 })
 
 //COMUNICAÇÃO com a porta 
