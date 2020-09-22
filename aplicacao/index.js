@@ -23,12 +23,12 @@ app.get('/', (req, res) => {
 
 const mensagens =[
     {
-        id:0,
         texto: "Essa é uma mensagem",
+        id:0
     },
     {
-        id:1,
-        texto: "Essa é outra mensagem"
+        texto: "Essa é outra mensagem",
+        id:1
     },
 ];
 
