@@ -26,4 +26,4 @@ Realizada aplicação no VSCODE
 
 Postman 
 
-![imagem que ilustra o teste GET no postman.](./Postman/get.png)
+![imagem que ilustra o teste GET no postman.](https://github.com/Fabicaneyu/Ocean_Backend_21_09_2020/blob/master/Postman/get.PNG)
