@@ -14,7 +14,11 @@ TÓPICOS ABORDADOS:
 
 # Aplicação 
 
-Realizada aplicação no VSCODE 
+Realizada aplicação no VSCODE com deploy no Heroku 
+
+# Deploy
+
+https://ocean-backend-fabi-22092020.herokuapp.com/
 
 # Libs Node.js
 
