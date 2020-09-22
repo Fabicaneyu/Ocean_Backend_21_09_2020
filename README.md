@@ -12,24 +12,24 @@ TÓPICOS ABORDADOS:
 
 - Computação na Nuvem
 
-# Aplicação 
+## Aplicação 
 
 Realizada aplicação no VSCODE com deploy no Heroku 
 
-# Deploy
+## Deploy
 
 https://ocean-backend-fabi-22092020.herokuapp.com/
 
-# Libs Node.js
+## Libs Node.js
 
 - Express
 
 - Body-parser
 
-# Teste - Postman Local 
+## Teste - Postman Local 
 
 ![imagem que ilustra o teste GET no postman aplicação local.](https://github.com/Fabicaneyu/Ocean_Backend_21_09_2020/blob/master/Postman/get_local.PNG)
 
-# Teste - Postman Heroku 
+## Teste - Postman Heroku 
 
 ![imagem que ilustra o teste GET no postman feito a partir do deploy no heroku.](https://github.com/Fabicaneyu/Ocean_Backend_21_09_2020/blob/master/Postman/get_heroku.PNG)
