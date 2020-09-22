@@ -29,7 +29,7 @@ const mensagens =[
     {
         id:1,
         texto: "Essa é outra mensagem"
-    }
+    },
 ];
 
 //READ ALL
@@ -37,9 +37,7 @@ const mensagens =[
 //eu filtro e esse boolean só passa o que tiver informação, se null ñ passa 
 app.get('/mensagens', (req, res) => {
     res.json(mensagens.filter(Boolean));
-})
-
-
+});
 
 //Create
 //endpoint - consultar no postmam POST: localhost:3000/mensagens
@@ -48,8 +46,8 @@ app.post('/mensagens', (req, res) => {
     const id = mensagens.length; //pega o length antes de dar o push 
     mensagem.id = id;
     mensagens.push(mensagem);
-    res.send(` A Mensagem com o texto '${mensagem.texto}' foi criada com sucesso ID: ${id}.`);
-})
+    res.send(`A mensagem com o texto '${mensagem.texto}' foi criada com sucesso. ID: ${id}.`);
+});
 
 //Read single
 ////endpoint - consultar no postmam GET: localhost:3000/mensagens/1 ou 2 
@@ -58,7 +56,7 @@ app.get('/mensagens/:id', (req, res) => {
     const id = req.params.id;
     const mensagem = mensagens[id]
     res.json(mensagem);
-})
+});
 
 //Update
 //endpoint - consultar no postmam PUT: localhost:3000/mensagens/1 ou 2
@@ -68,7 +66,7 @@ app.put('/mensagens/:id', (req, res) => {
     const novoTexto = req.body.texto;
     mensagens[id].texto = novoTexto;
     res.send(`Mensagem com o ID ${id} foi atualizada com sucesso`);
-})
+});
 
 //Delete
 //endpoint - consultar no postmam DELETE: localhost:3000/mensagens/1 ou 2
