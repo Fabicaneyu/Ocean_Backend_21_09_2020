@@ -22,8 +22,14 @@ app.get('/', (req, res) => {
 // crud criar, ler(ler tudo e ler individualmente), atualizar e remover
 
 const mensagens =[
-    "Essa é uma mensagem",
-    "Essa é outra mensagem"
+    {
+        id:0,
+        texto: "Essa é uma mensagem",
+    },
+    {
+        id:1,
+        texto: "Essa é outra mensagem"
+    }
 ];
 
 //READ ALL
@@ -37,14 +43,11 @@ app.get('/mensagens', (req, res) => {
 //Create
 //endpoint - consultar no postmam POST: localhost:3000/mensagens
 app.post('/mensagens', (req, res) => {
-
-
-    const mensagem = req.body.mensagem;
+    const mensagem = req.body;
+    const id = mensagens.length; //pega o length antes de dar o push 
+    mensagens.id = id;
     mensagens.push(mensagem);
-
-    const id = mensagens.length - 1;
-
-    res.send(`Mensagem criada ID: ${id}.`);
+    res.send(` A Mensagem com o texto ${mensagem.texto} foi criada com sucesso ID: ${id}.`);
 })
 
 //Read single
